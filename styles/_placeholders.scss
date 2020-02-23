@@ -1,0 +1,79 @@
+@import "./_variables.scss";
+
+// Text
+
+@mixin h1-main-headline() {
+    position: relative;
+    margin-bottom: 5px;
+    font-family: $font-sans;
+    font-weight: 400;
+}
+
+@mixin h2-white-headline() {
+    position: relative;
+    font-family: $font-sans;
+    color: $white-background;
+    font-weight: 100;
+}
+
+@mixin h2-black-headline() {
+    position: relative;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    font-family: $font-sans;
+    font-weight: 500;
+}
+
+
+@mixin main-paragraph() {
+    position: relative;
+    text-align: left;
+    font-family: $font-mono;
+    font-weight: 400;
+    line-height: 23px;
+}
+
+// Buttons
+
+@mixin main-button() {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green-primary;
+    margin-right: auto;
+    margin-bottom: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: $font-mono;
+    border: 0px;
+    text-decoration: none;
+    &:hover {
+      background-image: linear-gradient(to right, $green-primary, $blue-primary);
+      color: $white-background;
+    }
+}
+
+
+// Others
+
+@mixin skewed-rectangle() {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, $blue-primary, $blue-secondary);
+    transform: skewY(-6deg);
+}
+
+
+@mixin clip-path-trapezoid() {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-image: linear-gradient(to bottom, $blue-primary, $blue-secondary);
+    background-image: linear-gradient(to left, $blue-primary, $blue-secondary);
+}
